@@ -489,7 +489,30 @@ console.log("ticketPriceTotal:", ticketPriceTotal);
 // Now that you have used .forEach(), .map(), .filter(), and .reduce().  I want you to think of potential problems you could solve given the data set and the 5k fun run theme.  Try to create and then solve 3 unique problems using one or many of the array methods listed above.
 
 // Problem 1
+const shirtSizes = runners.map(runner => {
+  return runner.shirt_size;
+});
+
+console.log("shirtSizes:", shirtSizes);
+
+const uniqueShirtSizes = shirtSizes.filter((shirtSize, index) => {
+  return index === shirtSizes.indexOf(shirtSize);
+});
+
+console.log("uniqueShirtSizes:", uniqueShirtSizes);
 
 // Problem 2
+const shirtSizesCount = {};
+
+uniqueShirtSizes.forEach(uniqueShirtSize => {
+  shirtSizesCount[uniqueShirtSize] = 0;
+});
+
+console.log("shirtSizesCount:", shirtSizesCount);
 
 // Problem 3
+shirtSizes.forEach(shirtSize => {
+  shirtSizesCount[shirtSize]++;
+});
+
+console.log("shirtSizesCount:", shirtSizesCount);
