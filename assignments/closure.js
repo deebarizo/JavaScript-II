@@ -25,10 +25,10 @@ const counter = () => {
 // newCounter(); // 2
 
 const newCounter = counter();
-console.log("newCounter():", newCounter());
-console.log("newCounter():", newCounter());
-console.log("newCounter():", newCounter());
-console.log("newCounter():", newCounter());
+console.log(newCounter());
+console.log(newCounter());
+console.log(newCounter());
+console.log(newCounter());
 
 // ==== Challenge 3: Create a counter function with an object that can increment and decrement ====
 const counterFactory = () => {
@@ -41,7 +41,6 @@ const counterFactory = () => {
       count++;
       return count;
     },
-
     decrement: () => {
       count--;
       return count;
@@ -50,6 +49,9 @@ const counterFactory = () => {
 };
 
 const newCounterFactory = counterFactory();
-console.log("newCounterFactory.increment():", newCounterFactory.increment());
-console.log("newCounterFactory.increment():", newCounterFactory.increment());
-console.log("newCounterFactory.decrement():", newCounterFactory.decrement());
+console.log(newCounterFactory.increment());
+console.log(newCounterFactory.increment());
+console.log(newCounterFactory.decrement());
+
+const newCounterFactory2 = counterFactory();
+console.log(newCounterFactory2.decrement());

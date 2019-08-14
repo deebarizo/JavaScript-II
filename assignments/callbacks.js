@@ -1,6 +1,6 @@
 // Create a higher order function and invoke the callback function to test your work. You have been provided an example of a problem and a solution to see how this works with our items array.  Study both the problem and the solution to figure out the rest of the problems.
 
-const items = ["Pencil", "Notebook", "yo-yo", "Gum"];
+const items = ["Pencil", "Notebook", "yo-yo", "Gum", "yo-yo"];
 
 /* 
 
@@ -30,7 +30,7 @@ function getLength(arr, cb) {
 }
 
 getLength(items, arrayLength => {
-  console.log("arrayLength:", arrayLength);
+  console.log(arrayLength);
 });
 
 function last(arr, cb) {
@@ -39,7 +39,7 @@ function last(arr, cb) {
 }
 
 last(items, lastElem => {
-  console.log("lastElem:", lastElem);
+  console.log(lastElem);
 });
 
 function sumNums(x, y, cb) {
@@ -48,7 +48,7 @@ function sumNums(x, y, cb) {
 }
 
 sumNums(23, 31, sum => {
-  console.log("sum:", sum);
+  console.log(sum);
 });
 
 function multiplyNums(x, y, cb) {
@@ -57,7 +57,7 @@ function multiplyNums(x, y, cb) {
 }
 
 multiplyNums(2, 7, result => {
-  console.log("result:", result);
+  console.log(result);
 });
 
 function contains(item, list, cb) {
@@ -69,11 +69,11 @@ function contains(item, list, cb) {
 }
 
 contains("Pencil", items, inArray => {
-  console.log("inArray (Pencil):", inArray);
+  console.log(inArray);
 });
 
 contains("Apple", items, inArray => {
-  console.log("inArray (Apple):", inArray);
+  console.log(inArray);
 });
 
 /* STRETCH PROBLEM */
